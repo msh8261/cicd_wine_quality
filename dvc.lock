@@ -1,0 +1,61 @@
+schema: '2.0'
+stages:
+  process:
+    cmd: python src/process_data.py
+    deps:
+    - path: data/data.csv
+      md5: 64d12b891fb15cfabf65a98bb9dad2a7
+      size: 85743
+    - path: src/process_data.py
+      md5: 196af52fd49f1662b04b6fea385301a8
+      size: 1283
+    params:
+      params.yaml:
+        data:
+          raw: data/data.csv
+          intermediate: data/intermediate
+        process:
+          feature: quality
+          test_size: 0.2
+    outs:
+    - path: data/intermediate
+      md5: 5c164844c226a0beb7e695136d2907e9.dir
+      size: 195053
+      nfiles: 4
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/intermediate
+      md5: 5c164844c226a0beb7e695136d2907e9.dir
+      size: 195053
+      nfiles: 4
+    - path: src/train.py
+      md5: d1fbd3bc6e4e837b92e267f141d08537
+      size: 1645
+    params:
+      params.yaml:
+        data:
+          raw: data/data.csv
+          intermediate: data/intermediate
+        model: model/svm.pkl
+        train:
+          hyperparameters:
+            svm__kernel:
+            - linear
+            - rbf
+            svm__C:
+            - 0.1
+            - 1
+            - 10
+            svm__gamma:
+            - 0.1
+            - 1
+            - 10
+          grid_search:
+            cv: 5
+            scoring: accuracy
+            verbose: 3
+    outs:
+    - path: model/svm.pkl
+      md5: 690ccac153276d58ebf164e7463d68b8
+      size: 212023

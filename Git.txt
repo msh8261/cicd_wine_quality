@@ -1,0 +1,8 @@
+A new repo from an existing project:
+	Go into the directory containing the project.
+		1- git init.
+		2- git add .
+		3- git add .gitignore
+		4- git commit -m 'first commit'
+		5- git remote add origin git@github.com:msh8261/cicd_wine_quality
+		6- git push -u origin master
