@@ -1,17 +1,16 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+# ignores all .md files
+.md
 
+# does not ignore the README.md file
+!README.md
 
-/Git.txt
-/GuideDVC.txt
+.txt
+
+!requirements.txt
 
 # Distribution / packaging
 .Python
 build/
-develop-eggs/
-dist/
 downloads/
 
 # Installer logs
