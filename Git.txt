@@ -5,7 +5,8 @@ A new repo from an existing project:
 		3- git add .
 		4- git add .gitignore		
 		5- git commit -m 'first commit'
-		6- git remote add origin git@github.com:msh8261/cicd_wine_quality
+		6- git remote add origin https://@github.com:msh8261/cicd_wine_quality.git
 		7- git remote -v
 		8- git status
-		9- git push origin main
+		9- git checkout -b master
+		10- git push origin master
