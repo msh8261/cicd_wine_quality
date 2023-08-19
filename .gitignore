@@ -3,11 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# C extensions
-*.so
 
-Git.txt
-GuideDVC.txt
+/Git.txt
+/GuideDVC.txt
 
 # Distribution / packaging
 .Python
@@ -15,18 +13,6 @@ build/
 develop-eggs/
 dist/
 downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
 
 # Installer logs
 pip-log.txt
@@ -39,13 +25,7 @@ database.csv
 # Unit test / coverage reports
 htmlcov/
 .tox/
-.coverage
-.coverage.*
 .cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
 .pytest_cache/
 
 
@@ -53,26 +33,12 @@ coverage.xml
 instance/
 .webassets-cache
 
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
 
 # pyenv
 .python-version
-
-# celery beat schedule file
-celerybeat-schedule
-
-# SageMath parsed files
-*.sage.py
 
 # Environments
 .env
@@ -83,46 +49,24 @@ ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
-.spyderproject
-.spyproject
 
 # Rope project settings
 .ropeproject
 
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-
-# pycharm
-.idea/
 
 # datafiles
-packages/regression_model/regression_model/datasets/*.csv
-packages/regression_model/regression_model/datasets/*.zip
-packages/regression_model/regression_model/datasets/*.txt
+datasets/*.csv
+datasets/*.zip
+datasets/*.txt
 train.csv
 test.csv
-data_description.txt
-house-prices-advanced-regression-techniques.zip
-sample_submission.csv
-test_data_predictions.csv
-v2-plant-seedlings-dataset/
-v2-plant-seedlings-dataset.zip
 
 # all logs
 logs/
 
-# trained models (will be created in CI)
-packages/regression_model/regression_model/trained_models/*.pkl
-packages/neural_network_model/neural_network_model/trained_models/*.pkl
-packages/neural_network_model/neural_network_model/trained_models/*.h5
-*.h5
-packages/neural_network_model/neural_network_model/datasets/training_data_reference.txt
+
 
 .DS_Store
 
 kaggle.json
-packages/ml_api/uploads/*
+/uploads/*
