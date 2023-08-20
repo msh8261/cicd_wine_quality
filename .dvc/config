@@ -4,3 +4,5 @@
     url = gdrive://1fR1d7heB1CELKL0hgxr8f6GhiGqV9lII
     gdrive_use_service_account = true
     gdrive_service_account_user_email = my-dvc-project@dvc1-383819.iam.gserviceaccount.com
+    gdrive_client_id = 57985379975-ea3me0omltvbbcad9n71rl9d7jj80cc5.apps.googleusercontent.com
+    gdrive_client_secret = "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,"
