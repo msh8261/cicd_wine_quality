@@ -31,7 +31,7 @@ jobs:
         
       - name: Pull data and model
         env:
-          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
+          GDRIVE_CREDENTIALS_DATA: ${{secrets.GDRIVE_CREDENTIALS_DATA}}
         run: dvc pull
 
       - name: Run tests
@@ -45,7 +45,7 @@ jobs:
     
       - name: Create CML report
         env:
-          REPO_TOKEN: ${{ secrets.SECRET_TOKEN}}
+          REPO_TOKEN: ${{secrets.SECRET_TOKEN}}
         run: |
           # Add the metrics to the report
           dvc metrics show --show-md >> report.md
